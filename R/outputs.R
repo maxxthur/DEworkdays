@@ -35,8 +35,10 @@ workdays <- function(Y, state_level = FALSE) {
       dplyr::anti_join(fixed_fed, by = "date") %>%
       dplyr::anti_join(eastern_ded_fed, by = "date") %>%
       dplyr::mutate(year = lubridate::year(date),
-             month = lubridate::month(date),
-             day = lubridate::day(date))
+                    month = lubridate::month(date),
+                    week = lubridate::week(date),
+                    quarter = lubridate::quarter(date),
+                    day = lubridate::day(date))
   } else {
     fed_wd <- without_we %>%
       dplyr::anti_join(fixed_fed, by = "date") %>%
@@ -50,6 +52,8 @@ workdays <- function(Y, state_level = FALSE) {
       dplyr::anti_join(bnb, by = c("date", "level")) %>%
       dplyr::mutate(year = lubridate::year(date),
                     month = lubridate::month(date),
+                    week = lubridate::week(date),
+                    quarter = lubridate::quarter(date),
                     day = lubridate::day(date))
   }
 }
@@ -84,7 +88,33 @@ holidays <- function(Y, state_level = FALSE) {
                    bnb(dates = all_days)) %>%
     dplyr::mutate(year = lubridate::year(date),
                   month = lubridate::month(date),
+                  week = lubridate::week(date),
+                  quarter = lubridate::quarter(date),
                   day = lubridate::day(date))
 
   }
+}
+
+
+#' Title
+#'
+#' @param Y
+#'
+#' @return
+#' @export
+#'
+#' @examples
+federal_workdays_weighted <- function(Y) {
+  workdays(Y, state_level = T) %>%
+    dplyr::group_by(date) %>%
+    dplyr::count() %>%
+    dplyr::mutate(level = "federal",
+                  weighted_workdays = n/16) %>%
+    dplyr::select(date, weighted_workdays, level) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(year = lubridate::year(date),
+                  month = lubridate::month(date),
+                  week = lubridate::week(date),
+                  quarter = lubridate::quarter(date),
+                  day = lubridate::day(date))
 }
