@@ -9,9 +9,6 @@ easter_deduct_federal(eastern)
 \arguments{
 \item{eastern}{}
 }
-\value{
-
-}
 \description{
 Title
 }

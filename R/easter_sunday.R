@@ -3,7 +3,7 @@
 #' @param Y
 #'
 #' @return
-#'
+#' @export
 #'
 #' @examples
 gauss_easter <- function(Y) {

@@ -9,9 +9,6 @@ workdays(Y, state_level = FALSE)
 \arguments{
 \item{state_level}{}
 }
-\value{
-
-}
 \description{
 Title
 }

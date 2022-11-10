@@ -9,9 +9,6 @@ federal_workdays_weighted(Y)
 \arguments{
 \item{Y}{}
 }
-\value{
-
-}
 \description{
 Title
 }

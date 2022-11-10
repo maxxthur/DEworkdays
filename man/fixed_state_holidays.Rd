@@ -9,9 +9,6 @@ fixed_state_holidays(Y)
 \arguments{
 \item{Y}{}
 }
-\value{
-
-}
 \description{
 Title
 }

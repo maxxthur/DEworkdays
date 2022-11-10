@@ -9,9 +9,6 @@ gauss_easter(Y)
 \arguments{
 \item{Y}{}
 }
-\value{
-
-}
 \description{
 Title
 }

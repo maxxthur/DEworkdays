@@ -6,9 +6,6 @@
 \usage{
 fixed_federal_holidays(Y)
 }
-\value{
-
-}
 \description{
 Title
 }

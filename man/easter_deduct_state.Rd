@@ -9,9 +9,6 @@ easter_deduct_state(eastern)
 \arguments{
 \item{eastern}{}
 }
-\value{
-
-}
 \description{
 Title
 }

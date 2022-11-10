@@ -9,9 +9,6 @@ federal_states_days(days)
 \arguments{
 \item{days}{}
 }
-\value{
-
-}
 \description{
 Title
 }

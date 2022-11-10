@@ -3,7 +3,7 @@
 #' @param eastern
 #'
 #' @return
-#'
+#' @export
 #'
 #' @examples
 easter_deduct_federal <- function(eastern) {

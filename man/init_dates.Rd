@@ -9,9 +9,6 @@ init_dates(start, end)
 \arguments{
 \item{end}{}
 }
-\value{
-
-}
 \description{
 Title
 }

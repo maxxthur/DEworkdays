@@ -11,11 +11,6 @@ bnb(dates)
 \arguments{
 \item{dates}{}
 }
-\value{
-
-
-
-}
 \description{
 Title
 
